@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickshot 앱 기능 소개</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .card {
+            background: #fdfdfd;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%233498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>') no-repeat left center;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tickshot 앱 소개</h1>
+        <p><strong>Tickshot</strong>은 시간과 장소 정보를 기반으로 사진에 스탬프를 추가하는 기능을 제공하는 카메라 애플리케이션입니다.</p>
+
+        <h2>주요 기능</h2>
+
+        <div class="card">
+            <h3>📷 카메라 핵심 기능</h3>
+            <ul>
+                <li><strong>사진 촬영:</strong> 고해상도 사진 촬영 기능을 제공합니다.</li>
+                <li><strong>플래시 제어:</strong> 자동(Auto), 켜기(On), 끄기(Off) 3가지 플래시 모드를 지원합니다.</li>
+                <li><strong>화면 비율 조절:</strong> 9:16, 3:4, 1:1 등 다양한 화면 비율로 전환하며 촬영할 수 있습니다.</li>
+                <li><strong>타이머:</strong> 3초, 5초 타이머 설정 후 촬영하는 기능을 제공합니다.</li>
+                <li><strong>카메라 전환:</strong> 전면/후면 카메라 전환 기능을 지원합니다.</li>
+                <li><strong>줌 기능:</strong> Pinch-to-zoom 제스처를 통해 부드러운 줌 인/아웃이 가능합니다.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🎨 스탬프 & 편집 기능</h3>
+            <ul>
+                <li><strong>다양한 스탬프:</strong> 촬영 시간, 날씨, 위치 정보 등을 담은 기본 스탬프 외에도, 잡지, 만화, 폴라로이드 등 다양한 디자인의 스탬프를 제공합니다. (<code>NormalStamp</code>, <code>MagazineStamp</code>, <code>BalloonStamp</code> 등)</li>
+                <li><strong>위치 정보 스탬프:</strong> 사용자의 현재 위치(주소)를 가져와 스탬프에 표시하는 기능을 켜고 끌 수 있습니다. (<code>LocationManager</code>)</li>
+                <li><strong>스탬프 색상 변경:</strong> 스탬프의 색상을 흰색 또는 검은색으로 전환하여 배경과 잘 어울리도록 설정할 수 있습니다.</li>
+                <li><strong>앨범 사진 편집:</strong> 디바이스 앨범에 저장된 사진을 불러와 스탬프를 추가하고 저장하는 기능을 제공합니다. (<code>AlbumStampScreen</code>)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🖼️ 갤러리 연동</h3>
+            <ul>
+                <li><strong>최신 사진 표시:</strong> 카메라 화면에서 가장 최근에 촬영한 사진을 썸네일로 표시하여 앨범으로 빠르게 이동할 수 있습니다.</li>
+                <li><strong>갤러리 저장:</strong> 스탬프가 적용된 최종 결과물을 사용자의 갤러리에 저장합니다. (<code>PhotoManager</code>)</li>
+            </ul>
+        </div>
+
+        
+
+        <p class="footer">이 문서는 Tickshot 프로젝트의 소스 코드를 기반으로 자동 생성되었습니다.</p>
+    </div>
+</body>
+</html>

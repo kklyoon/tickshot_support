@@ -71,6 +71,33 @@
             font-size: 0.9em;
             color: #777;
         }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+            .container {
+                background: #1e1e1e;
+                box-shadow: 0 0 15px rgba(255,255,255,0.1);
+            }
+            h1, h2, h3 {
+                color: #e0e0e0;
+                border-bottom-color: #03dac6;
+            }
+            .card {
+                background: #2c2c2c;
+                border-color: #333;
+            }
+            li {
+                background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%2303dac6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>');
+            }
+            code {
+                background-color: #333;
+            }
+            .footer {
+                color: #aaa;
+            }
+        }
     </style>
 </head>
 <body>
